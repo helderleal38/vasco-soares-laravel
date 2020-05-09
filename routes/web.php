@@ -10,12 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/test', function(){
-	return view('test');
-});
+Route::get('/pre_inscription', function(){
+	return view('pre_inscription');
+})->name('pre_inscription');
 
-Route::get('/accueil', function () {
-    return view('accueil');
+Route::get('/accueil', function () { 
+	return view('accueil'); 
 })->name('accueil');
 
 Route::get('/services', function () {
@@ -32,7 +32,7 @@ Route::get('/about', function () {
 
 Route::get('/recrutement', function () {
     return view('recrutement');
-});
+})->name('recrutement');
 
 Route::get('/contact', function () {
     return view('contact');
@@ -44,3 +44,5 @@ Route::get('/contact', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('logout', '\App\Http\Controllers\LoginController@logout')->name('logout');

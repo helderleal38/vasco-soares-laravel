@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('accueil');
+       // return redirect('login')->with(Auth::logout());
     }
 }

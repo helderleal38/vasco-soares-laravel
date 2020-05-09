@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Vasco Soares') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -41,7 +41,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
-                        <li class="nav-item"><a class="nav-link" href="{{route('accueil')}}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{asset('accueil')}}">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{asset('services')}}">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{asset('matieres')}}">Matières</a></li> 
                         <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">A propos</a></li> 
@@ -53,7 +53,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Connexion') }}</a>
                                 </li>
                             @endif
                         @else
@@ -61,14 +61,12 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                            document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>

@@ -24,6 +24,13 @@
         occaecat nisi ad non minim tempor sunt voluptate consectetur exercitation id ut nulla. Ea et fugiat
         aliquip nostrud sunt incididunt consectetur culpa aliquip eiusmod dolor. Anim ad Lorem aliqua in
         cupidatat nisi enim eu nostrud do aliquip veniam minim.
+        <div class="form-group row mb-0">
+            <div class="col-md-6 offset-md-4">
+                <button type="submit" class="btn btn-primary">
+                    {{ __('Inscription') }}
+                </button>
+            </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
       	<h1>Anglais</h1>

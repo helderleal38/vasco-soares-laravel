@@ -5,10 +5,18 @@
  		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-caption">
+                <!--Verification de l'authentification avant la pré-inscription-->
+                @if(Auth::guest())
+                <div class="animated fadeInDown" backgound="grey">
+                    <h3 class="h3-responsive">Notre interet c'est votre reussite</h3>
+                    <a class="btn btn-primary" href="{{route('register')}}">Inscrivez-vous</a>
+                </div>              
+                @else
                 <div class="animated fadeInDown">
                     <h3 class="h3-responsive">Notre interet c'est votre reussite</h3>
-                    <button type="button" class="btn btn-secondary">Inscrivez-vous</button>
+                    <a class="btn btn-primary" href="{{route('pre_inscription')}}">Inscrivez-vous</a>
                 </div>
+                @endif
             </div>
             <div class="carousel-item active">
                 <img class="d-block w-100" src="{{asset('assets/slider4.jpg')}}"
@@ -33,9 +41,9 @@
         </a>
     </div>
 </section>
-{{--Pourquoi nous choisir--}}
-<div class="home-container z-depth-1 my-5 py-5 px-4 px-lg-0">
 
+<!-----------------Pouquoi nous choisir------------------>
+<div class="home-container z-depth-1 my-5 py-5 px-4 px-lg-0">
   <!-- Section -->
   <section>
     

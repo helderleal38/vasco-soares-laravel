@@ -260,6 +260,13 @@ a{
   height:700px;
 }
 
+.container-pre_inscription{
+  padding-top: 90px;
+  width:  60%;
+  margin: 0 auto;
+  height:100%;
+}
+
 /****************footer****************/
 .page-footer{
   background: white;
