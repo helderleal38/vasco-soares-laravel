@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Role;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -36,4 +37,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    
+    /**
+    * Un utilisateur peut avoir plusieurs roles.
+    */
+    public function roles(){
+        return $this->belongsToMany(Role::class);
+    }
+
 }

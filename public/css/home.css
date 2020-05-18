@@ -267,6 +267,13 @@ a{
   height:100%;
 }
 
+.container_users_index{
+ padding-top: 90px;
+  width:  60%;
+  margin: 0 auto;
+  height:100%; 
+}
+
 /****************footer****************/
 .page-footer{
   background: white;

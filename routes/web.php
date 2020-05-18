@@ -45,4 +45,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('logout', '\App\Http\Controllers\LoginController@logout')->name('logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');
+
+/*Admin Routes*/
+Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function(){
+
+	Route::resource('users', 'UsersController');
+});

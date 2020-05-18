@@ -17,21 +17,21 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Prenom') }}</label>
+                            <label for="firstName" class="col-md-4 col-form-label text-md-right">{{ __('Prenom') }}</label>
                             <div class="col-md-6">
-                                <input id="firstname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="firstname" value="{{ old('firstname') }}" required autocomplete="firstname" autofocus>
+                                <input id="firstName" type="text" class="form-control @error('firstName') is-invalid @enderror" name="firstName" value="{{ old('firstName') }}" required autocomplete="firstName" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="scoolyear" class="col-md-4 col-form-label text-md-right">{{ __('Ecole') }}</label>
+                            <label for="scoolName" class="col-md-4 col-form-label text-md-right">{{ __('Ecole') }}</label>
                             <div class="col-md-6">
-                                <input id="scoolyear" type="text" class="form-control @error('firstname') is-invalid @enderror" name="scoolyear" value="{{ old('scoolyear') }}" required autocomplete="scoolyear" autofocus>
+                                <input id="scoolName" type="text" class="form-control @error('scoolName') is-invalid @enderror" name="scoolName" value="{{ old('scoolName') }}" required autocomplete="scoolName" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="scoolname" class="col-md-4 col-form-label text-md-right">{{ __('Année') }}</label>
+                            <label for="year" class="col-md-4 col-form-label text-md-right">{{ __('Année') }}</label>
                             <div class="col-md-6">
-                                <input id="scoolname" type="text" class="form-control @error('firstname') is-invalid @enderror" name="scoolname" value="{{ old('scoolname') }}" required autocomplete="scoolname" autofocus>
+                                <input id="year" type="text" class="form-control @error('year') is-invalid @enderror" name="year" value="{{ old('year') }}" required autocomplete="year" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -43,13 +43,13 @@
                         <div class="form-group row">
                             <label for="responsible" class="col-md-4 col-form-label text-md-right">{{ __('Responsable légal') }}</label>
                             <div class="col-md-6">
-                                <input id="responsible" type="text" class="form-control @error('matter') is-invalid @enderror" name="responsible" value="{{ old('responsible') }}" required autocomplete="responsible" autofocus>
+                                <input id="responsible" type="text" class="form-control @error('responsible') is-invalid @enderror" name="responsible" value="{{ old('responsible') }}" required autocomplete="responsible" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="adress" class="col-md-4 col-form-label text-md-right">{{ __('Adresse') }}</label>
+                            <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Adresse') }}</label>
                             <div class="col-md-6">
-                                <input id="adress" type="text" class="form-control @error('matter') is-invalid @enderror" name="adress" value="{{ old('adress') }}" required autocomplete="adress" autofocus>
+                                <input id="address" type="text" class="form-control @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
                             </div>
                         </div>
                         <div class="form-group row">

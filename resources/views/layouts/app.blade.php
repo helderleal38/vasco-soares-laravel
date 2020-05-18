@@ -40,20 +40,25 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        <li class="nav-item"><a class="nav-link" href="{{asset('accueil')}}">Home</a></li>
+                        <!-- Menu Links -->
+                        <li class="nav-item"><a class="nav-link" href="{{asset('accueil')}}">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{asset('services')}}">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{asset('matieres')}}">Matières</a></li> 
                         <li class="nav-item"><a class="nav-link" href="{{asset('about')}}">A propos</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{{asset('recrutement')}}">Recrutement</a></li> 
-                        <li class="nav-item"><a class="nav-link" href="{{asset('contact')}}">Contact</a></li> 
+                        @if(Auth::guest())
+                            <li class="nav-item"><a class="nav-link" href="{{route('register')}}">Recrutement</a></li>
+                        @else
+                            <li class="nav-item"><a class="nav-link" href="{{asset('recrutement')}}">Recrutement</a></li>
+                        @endif 
+                        <li class="nav-item"><a class="nav-link" href="{{asset('contact')}}">Contact</a></li>
+                        <!-- Authentication Links --> 
                         @guest
                             <li class="nav-item ml-4">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Connexion') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item ">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Connexion') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __("S'inscrire") }}</a>
                                 </li>
                             @endif
                         @else
@@ -68,8 +73,11 @@
                                         {{ __('Logout') }}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
+                                    @csrf
                                     </form>
+                                    @if (Auth::user()->name == 'Admin')
+                                    <a class="dropdown-item" href="{{route('admin.users.index')}}">Liste des utilisateurs</a>
+                                    @endif
                                 </div>
                             </li>
                         @endguest
