@@ -75,9 +75,9 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                     </form>
-                                    @if (Auth::user()->name == 'Admin')
+                                    <!-- @if (Auth::user()->role == "admin")
                                     <a class="dropdown-item" href="{{route('admin.users.index')}}">Liste des utilisateurs</a>
-                                    @endif
+                                    @endif -->
                                 </div>
                             </li>
                         @endguest

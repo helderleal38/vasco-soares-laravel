@@ -38,10 +38,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    // public function redirectTo()
+    // {
+    //     if( Auth::user()->roles->pluck('name')->contains('admin'))
+    //     {
+    //         return redirect('/admin/users/index');
+    //     }
+    // }
+
     /*Where to redirect users after logout*/
 
-    public function logout(){
+    public function logout()
+    {
         Auth::logout();
         return redirect ('/accueil');
     }
+
+    
 }
