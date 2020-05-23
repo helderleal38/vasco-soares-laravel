@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Role;
+use App\Student;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -43,6 +44,13 @@ class User extends Authenticatable
     */
     public function roles(){
         return $this->belongsToMany(Role::class);
+    }
+
+    /**
+    * Un utilisateur fait reference a un student.
+    */
+    public function students(){
+        return $this->hasOne(Student::class);
     }
 
 }

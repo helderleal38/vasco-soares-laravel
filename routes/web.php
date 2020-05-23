@@ -10,9 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/pre_inscription', function(){
-	return view('pre_inscription');
-})->name('pre_inscription');
+
 
 Route::get('/accueil', function () { 
 	return view('accueil'); 
@@ -38,7 +36,10 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+/*PRE-INSCRIPTION*/
 
+Route::get('/pre_inscription', "Admin\StudentsController@index")->name('pre_inscription');
+Route::post('/pre_inscription', "Admin\StudentsController@store")->name('pre_inscription_store');
 
 
 Auth::routes();

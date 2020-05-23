@@ -14,7 +14,7 @@
                 @else
                 <div class="animated fadeInDown">
                     <h3 class="h3-responsive">Notre interet c'est votre reussite</h3>
-                    <a class="btn btn-primary" href="{{route('pre_inscription')}}">Inscrivez-vous</a>
+                    <a class="btn btn-primary" href="{{route('pre_inscription_store')}}">Inscrivez-vous</a>
                 </div>
                 @endif
             </div>
